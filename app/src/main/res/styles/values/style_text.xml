@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SansSerif400">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="SansSerif400.Normal">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="SansSerif400.Normal.Black_00">
+        <item name="android:textColor">@color/black_00</item>
+    </style>
+
+    <style name="SansSerif400.Normal.Black_00.Size14">
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <style name="SansSerif400.Normal.Black_00.Size14.Zero_W">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SansSerif400.Normal.Black_00.Size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SansSerif400.Normal.Black_00.Size16.MW">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SansSerif400.Normal.Grey_4b">
+        <item name="android:textColor">@color/grey_4b</item>
+    </style>
+
+    <style name="SansSerif400.Normal.Grey_4b.Size16">
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <style name="SansSerif400.Normal.Grey_4b.Size16.Zero_W">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SansSerif400.Bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SansSerif500">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="SansSerif500.Normal">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="SansSerif500.Normal.White_ff">
+        <item name="android:textColor">@color/white_ff</item>
+    </style>
+
+    <style name="SansSerif500.Normal.White_ff.Size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="SansSerif500.Normal.White_ff.Size18.MM">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="SansSerif500.Normal.Purple_6936d6">
+        <item name="android:textColor">@color/purple_6936d6</item>
+    </style>
+
+    <style name="SansSerif500.Normal.Purple_6936d6.Size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SansSerif500.Normal.Purple_6936d6.Size16.WW">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SansSerif700">
+        <item name="android:fontFamily">sans-serif-black</item>
+    </style>
+
+    <style name="SansSerif700.Normal">
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="SansSerif700.Normal.Black_00">
+        <item name="android:textColor">@color/black_00</item>
+    </style>
+
+    <style name="SansSerif700.Normal.Black_00.Size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SansSerif700.Normal.Black_00.Size16.M_H40">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="SansSerif700.Normal.Black_00.Size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="SansSerif700.Normal.Black_00.Size20.MW">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SansSerif700.Normal.Black_00.Size26">
+        <item name="android:textSize">26sp</item>
+        <item name="lineHeight">32sp</item>
+    </style>
+
+    <style name="SansSerif700.Normal.Black_00.Size26.Zero_W">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SansSerif700.Normal.Purple_6936d6">
+        <item name="android:textColor">@color/purple_6936d6</item>
+    </style>
+
+    <style name="SansSerif700.Normal.Purple_6936d6.Size24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="SansSerif700.Normal.Purple_6936d6.Size24.WW">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

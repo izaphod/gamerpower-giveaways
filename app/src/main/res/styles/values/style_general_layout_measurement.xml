@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="WM">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="WW">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MM">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="MW">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="M_Zero">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="Zero_Zero">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="Zero_W">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="Zero_M">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- Linear Layouts -->
+
+    <style name="LVMM" parent="MM">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LVMW" parent="MW">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LVWM" parent="WM">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LVWW" parent="WW">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LHMM" parent="MM">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LHMW" parent="MW">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LHWM" parent="WM">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LHWW" parent="WW">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LH0M" parent="Zero_M">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LH0W" parent="Zero_W">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LV0W" parent="Zero_W">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LV0M" parent="Zero_M">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LVM0" parent="M_Zero">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LVMW.RippleBorderless">
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="LVMW.Ripple">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="LHMW.Ripple">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="LHWW.Ripple">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+</resources>
