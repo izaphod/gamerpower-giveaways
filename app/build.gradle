@@ -32,6 +32,23 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res/layouts/items',
+                    'src/main/res/layouts/fragments',
+                    'src/main/res/layouts/fragments/graphs',
+                    'src/main/res/layouts/appbars',
+                    'src/main/res/layouts/appbars/toolbars',
+                    'src/main/res/layouts/activities',
+                    'src/main/res/layouts/views',
+                    'src/main/res/layouts',
+                    'src/main/res/strings',
+                    'src/main/res/styles',
+                    'src/main/res'
+            ]
+        }
+    }
 }
 
 dependencies {
