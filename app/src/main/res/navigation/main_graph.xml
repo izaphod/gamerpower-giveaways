@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/gameGiveawayFragment">
 
+    <fragment
+        android:id="@+id/gameGiveawayFragment"
+        android:name="com.nimadugarov.gamepowergiveaways.ui.fragments.GameGiveawaysFragment"
+        tools:layout="@layout/game_giveaways_fragment"
+        android:label="Game Giveaway Fragment" />
 </navigation>

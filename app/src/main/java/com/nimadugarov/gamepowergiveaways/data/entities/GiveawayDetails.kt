@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 /**
  * Entity для деталей раздаваемой игры
  */
-data class GameGiveawayDetails(
+data class GiveawayDetails(
     val id: Long?,
     val title: String?,
     @SerializedName("thumbnail")
