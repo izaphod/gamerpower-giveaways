@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Loading" parent="Widget.MaterialComponents.CircularProgressIndicator">
+        <item name="indicatorColor">@color/blue_57c6de</item>
+    </style>
+
+    <style name="Loading.Indeterminate">
+        <item name="android:indeterminate">true</item>
+    </style>
+
+    <style name="Loading.Indeterminate.WW">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>
