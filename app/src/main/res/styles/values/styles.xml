@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple_6936d6</item>
+        <item name="colorPrimaryVariant">@color/purple_3700b3</item>
+        <item name="colorSurface">@color/white_e5</item>
+        <item name="colorOnPrimary">@color/white_ff</item>
+        <item name="colorSecondary">@color/teal_03dac5</item>
+        <item name="colorSecondaryVariant">@color/teal_018786</item>
+        <item name="colorOnSecondary">@color/black_00</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:colorBackground">@color/white_ff</item>
+        <item name="snackbarStyle">@style/Snackbar.NetworkError</item>
+    </style>
+
+    <style name="MainToolbar" parent="Widget.MaterialComponents.Toolbar.PrimarySurface">
+        <item name="android:background">@color/purple_6936d6</item>
+    </style>
+
+    <style name="MainToolbar.M_H56">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+    </style>
+
+    <style name="Snackbar" parent="Widget.MaterialComponents.Snackbar" />
+
+    <style name="Snackbar.NetworkError">
+        <item name="android:background">@color/black_23</item>
+    </style>
+
+</resources>

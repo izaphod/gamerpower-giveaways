@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar_title_text"
+    style="@style/SansSerif500.Normal.White_ff.Size18.MM"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:maxLines="1" />
