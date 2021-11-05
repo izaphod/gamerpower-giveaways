@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_no_internet_connection">Отсутствует подключение к сети</string>
+    <string name="error_unknown">Неопознанная ошибка</string>
+    <string name="error_slow_internet_connection">Медленное соединение</string>
+    <string name="error_data_parsing">Ошибка обработки данных</string>
+    <string name="error_server">Ошибка сервера</string>
+</resources>
