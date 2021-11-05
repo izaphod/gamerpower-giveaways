@@ -1,4 +1,4 @@
-package com.nimadugarov.gamepowergiveaways.network.base
+package com.nimadugarov.gamepowergiveaways.data.network.base
 
 import androidx.annotation.StringRes
 import com.nimadugarov.gamepowergiveaways.R
