@@ -35,6 +35,10 @@ class GameGiveawaysPresenter(
         }
     }
 
+    fun reloadGameGiveaways() {
+        loadGameGiveaways()
+    }
+
     private fun loadGameGiveaways() {
         giveawayList = null
         giveawayModel.resetGiveaways(

@@ -10,6 +10,8 @@ import com.nimadugarov.gamepowergiveaways.mvp.presenters.GameGiveawaysPresenter
 import com.nimadugarov.gamepowergiveaways.mvp.views.GameGiveawaysView
 import com.nimadugarov.gamepowergiveaways.ui.extensions.ContentLoading
 import com.nimadugarov.gamepowergiveaways.ui.extensions.ListExtension
+import com.nimadugarov.gamepowergiveaways.ui.extensions.snackbar_holder.DefaultSnackBarHolder
+import com.nimadugarov.gamepowergiveaways.ui.extensions.snackbar_holder.SnackBarActionListener
 import com.nimadugarov.gamepowergiveaways.ui.fragments.base.BaseWithAppBarNavigationFragment
 import com.nimadugarov.gamepowergiveaways.ui.list.adapters.GiveawayAdapter
 import com.nimadugarov.gamepowergiveaways.ui.list.generators.GiveawayItemListGenerator
@@ -21,7 +23,7 @@ import org.koin.android.ext.android.get
  * Fragment для отображения списка раздаваемых игр
  */
 class GameGiveawaysFragment : BaseWithAppBarNavigationFragment(R.layout.game_giveaways_fragment),
-    ContentLoading, GameGiveawaysView, GameGiveawayViewHolderListener {
+    ContentLoading, GameGiveawaysView, GameGiveawayViewHolderListener, SnackBarActionListener {
 
     private var binding: GameGiveawaysFragmentBinding? = null
     private var adapter: GiveawayAdapter? = null
@@ -56,7 +58,12 @@ class GameGiveawaysFragment : BaseWithAppBarNavigationFragment(R.layout.game_giv
     }
 
     override fun showContentLoadingError(error: String) {
-        // todo показать snackbar с ошибкой
+        DefaultSnackBarHolder(viewLifecycleOwner, binding!!.root)
+            .showIndefiniteDurationMessage(
+                message = error,
+                actionText = getString(R.string.button_retry),
+                actionListener = this
+            )
     }
 
     override fun getContentView(): View? = binding?.giveawayList
@@ -65,6 +72,10 @@ class GameGiveawaysFragment : BaseWithAppBarNavigationFragment(R.layout.game_giv
 
     override fun onGiveawayClick(giveawayId: Long?) {
         presenter.onGameGiveawayClicked(giveawayId)
+    }
+
+    override fun onActionClick() {
+        presenter.reloadGameGiveaways()
     }
 
     private fun initViews() {
