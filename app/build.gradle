@@ -11,12 +11,15 @@ android {
         minSdk 23
         targetSdk 31
         versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        versionName "1.1.0"
     }
 
     buildTypes {
+        debug {
+            minifyEnabled false
+            versionNameSuffix '-debug'
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
