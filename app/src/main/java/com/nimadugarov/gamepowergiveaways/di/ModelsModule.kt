@@ -5,7 +5,7 @@ import com.nimadugarov.gamepowergiveaways.mvp.models.GiveawayModelProd
 import org.koin.dsl.module
 
 /**
- * Файл с определением модулей моделей
+ * Файл koin модуля с определением моделей
  */
 val giveawayModelModule = module {
     factory<GiveawayModel> {

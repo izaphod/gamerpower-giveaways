@@ -6,25 +6,32 @@ import android.widget.TextView
 import com.nimadugarov.gamepowergiveaways.R
 import com.nimadugarov.gamepowergiveaways.data.entities.Giveaway
 import com.nimadugarov.gamepowergiveaways.databinding.GameGiveawaysFragmentBinding
-import com.nimadugarov.gamepowergiveaways.mvp.views.GameGiveawayView
+import com.nimadugarov.gamepowergiveaways.mvp.presenters.GameGiveawaysPresenter
+import com.nimadugarov.gamepowergiveaways.mvp.views.GameGiveawaysView
 import com.nimadugarov.gamepowergiveaways.ui.extensions.ContentLoading
 import com.nimadugarov.gamepowergiveaways.ui.extensions.ListExtension
 import com.nimadugarov.gamepowergiveaways.ui.fragments.base.BaseWithAppBarNavigationFragment
 import com.nimadugarov.gamepowergiveaways.ui.list.adapters.GiveawayAdapter
 import com.nimadugarov.gamepowergiveaways.ui.list.generators.GiveawayItemListGenerator
 import com.nimadugarov.gamepowergiveaways.ui.list.view_holders.GiveawayViewHolder.GameGiveawayViewHolderListener
+import moxy.ktx.moxyPresenter
+import org.koin.android.ext.android.get
 
 /**
  * Fragment для отображения списка раздаваемых игр
  */
 class GameGiveawaysFragment : BaseWithAppBarNavigationFragment(R.layout.game_giveaways_fragment),
-    ContentLoading, GameGiveawayView, GameGiveawayViewHolderListener {
+    ContentLoading, GameGiveawaysView, GameGiveawayViewHolderListener {
 
     private var binding: GameGiveawaysFragmentBinding? = null
     private var adapter: GiveawayAdapter? = null
     private var toolbarTitleView: TextView? = null
 
     private val itemListGenerator = GiveawayItemListGenerator()
+
+    private val presenter by moxyPresenter {
+        get<GameGiveawaysPresenter>()
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -44,12 +51,12 @@ class GameGiveawaysFragment : BaseWithAppBarNavigationFragment(R.layout.game_giv
         adapter?.updateItems(gameGiveawayItemList)
     }
 
-    override fun showGameGiveawayDetails() {
-        TODO("Not yet implemented")
+    override fun showGameGiveawayDetails(giveawayId: Long) {
+        // todo навигаци на экран с детальной информацией
     }
 
     override fun showContentLoadingError(error: String) {
-        TODO("Not yet implemented")
+        // todo показать snackbar с ошибкой
     }
 
     override fun getContentView(): View? = binding?.giveawayList
@@ -57,7 +64,7 @@ class GameGiveawaysFragment : BaseWithAppBarNavigationFragment(R.layout.game_giv
     override fun getContentLoadingView(): View? = binding?.progressView?.loadingView
 
     override fun onGiveawayClick(giveawayId: Long?) {
-        TODO("Not yet implemented")
+        presenter.onGameGiveawayClicked(giveawayId)
     }
 
     private fun initViews() {

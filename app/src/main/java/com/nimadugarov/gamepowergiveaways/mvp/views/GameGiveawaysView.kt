@@ -1,14 +1,14 @@
 package com.nimadugarov.gamepowergiveaways.mvp.views
 
 import com.nimadugarov.gamepowergiveaways.data.entities.Giveaway
-import com.sequenia.app.movieapp.mvp.views.base.ContentLoadingView
+import com.nimadugarov.gamepowergiveaways.mvp.views.base.ContentLoadingView
 import moxy.viewstate.strategy.alias.AddToEndSingle
 import moxy.viewstate.strategy.alias.OneExecution
 
 /**
  * View для экрана со списком раздаваемых игр
  */
-interface GameGiveawayView : ContentLoadingView {
+interface GameGiveawaysView : ContentLoadingView {
 
     /**
      * Отобразить список [раздаваемых игр][Giveaway]
@@ -20,5 +20,5 @@ interface GameGiveawayView : ContentLoadingView {
      * Перейти к экрану с детальной информацией о раздаваемой игре
      */
     @OneExecution
-    fun showGameGiveawayDetails()
+    fun showGameGiveawayDetails(giveawayId: Long)
 }

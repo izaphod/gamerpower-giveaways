@@ -1,7 +1,7 @@
 package com.nimadugarov.gamepowergiveaways.ui.extensions
 
 import android.view.View
-import com.sequenia.app.movieapp.mvp.views.base.ContentLoadingView
+import com.nimadugarov.gamepowergiveaways.mvp.views.base.ContentLoadingView
 
 /**
  * Интерфейс для управления состоянием загрузки контента на view

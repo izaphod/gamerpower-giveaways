@@ -7,6 +7,7 @@ import com.nimadugarov.extensions.image_loader.GlideLoaderCreator
 import com.nimadugarov.extensions.image_loader.ImageLoader
 import com.nimadugarov.gamepowergiveaways.di.giveawayModelModule
 import com.nimadugarov.gamepowergiveaways.di.networkModule
+import com.nimadugarov.gamepowergiveaways.di.presentersModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -21,7 +22,7 @@ class App : Application() {
         ImageLoader.loaderCreator = GlideLoaderCreator()
         startKoin {
             androidContext(this@App)
-            modules(listOf(networkModule, giveawayModelModule))
+            modules(listOf(networkModule, giveawayModelModule, presentersModule))
         }
     }
 

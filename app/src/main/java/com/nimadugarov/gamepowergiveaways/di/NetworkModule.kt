@@ -5,7 +5,7 @@ import com.nimadugarov.gamepowergiveaways.mvp.models.gateways.GiveawayGateway
 import org.koin.dsl.module
 
 /**
- * Файл с определением модулей сервисов API
+ * Файл koin модуля с определением сервисов API
  */
 val networkModule = module {
     val timeoutInMilliseconds: Long = 60000
