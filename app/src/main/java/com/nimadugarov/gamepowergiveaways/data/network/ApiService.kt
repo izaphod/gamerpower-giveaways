@@ -1,6 +1,7 @@
 package com.nimadugarov.gamepowergiveaways.data.network
 
 import com.nimadugarov.gamepowergiveaways.data.entities.Giveaway
+import com.nimadugarov.gamepowergiveaways.data.entities.GiveawayDetails
 import com.nimadugarov.gamepowergiveaways.data.network.entities.GiveawayResponse
 import retrofit2.Call
 import retrofit2.http.GET
@@ -28,12 +29,12 @@ interface ApiService {
     ): Call<GiveawayResponse>
 
     /**
-     * Загрузить детальную информацию о [раздаче][Giveaway], где
+     * Загрузить [детальную информацию о раздаче][GiveawayDetails], где
      *
      * [giveawayId] - id раздачи
      */
     @GET("giveaway")
-    fun getGiveaway(
+    fun getGiveawayDetails(
         @Query("id") giveawayId: Long
-    ): Call<Giveaway>
+    ): Call<GiveawayDetails>
 }
