@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/gameGiveawayFragment"
-        android:name="com.nimadugarov.gamepowergiveaways.ui.fragments.GameGiveawaysFragment"
+        android:name="com.nimadugarov.gamerpowergiveaways.ui.fragments.GameGiveawaysFragment"
         tools:layout="@layout/game_giveaways_fragment"
         android:label="Game Giveaway Fragment" />
 </navigation>
