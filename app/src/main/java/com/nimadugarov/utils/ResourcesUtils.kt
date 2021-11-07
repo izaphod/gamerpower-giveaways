@@ -7,7 +7,7 @@ import android.util.TypedValue
 import android.view.Window
 import androidx.annotation.*
 import androidx.core.content.ContextCompat
-import com.nimadugarov.gamepowergiveaways.application.App
+import com.nimadugarov.gamerpowergiveaways.application.App
 import java.util.*
 
 /**

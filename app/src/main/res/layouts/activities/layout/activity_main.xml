@@ -20,7 +20,7 @@
                 android:id="@+id/collapsing_content"
                 style="@style/LVMW">
 
-                <com.nimadugarov.gamepowergiveaways.ui.extensions.CenteredTitleToolbar
+                <com.nimadugarov.gamerpowergiveaways.ui.extensions.CenteredTitleToolbar
                     android:id="@+id/toolbar"
                     style="@style/MainToolbar.M_H56" />
 
