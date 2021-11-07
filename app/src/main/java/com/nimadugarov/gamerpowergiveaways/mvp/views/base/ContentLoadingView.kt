@@ -1,6 +1,5 @@
-package com.sequenia.app.movieapp.mvp.views.base
+package com.nimadugarov.gamerpowergiveaways.mvp.views.base
 
-import com.nimadugarov.gamerpowergiveaways.mvp.views.base.BaseView
 import moxy.viewstate.strategy.AddToEndSingleTagStrategy
 import moxy.viewstate.strategy.SingleStateStrategy
 import moxy.viewstate.strategy.StateStrategyType

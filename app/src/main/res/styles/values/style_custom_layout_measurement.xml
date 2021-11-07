@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="LVM_H40">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="M_H192">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">192dp</item>
+    </style>
+    
+</resources>

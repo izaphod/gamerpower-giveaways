@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LVMM">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/giveaway_list"
+        style="@style/MM"
+        android:clipToPadding="false"
+        android:paddingVertical="8dp"
+        tools:listitem="@layout/game_giveaway_item" />
+
+    <include
+        android:id="@+id/progress_view"
+        style="@style/WW"
+        layout="@layout/loading_view"
+        android:layout_centerInParent="true"
+        tools:ignore="IncludeLayoutParam" />
+
+</RelativeLayout>
