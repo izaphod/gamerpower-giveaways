@@ -2,7 +2,6 @@ package com.nimadugarov.gamepowergiveaways.data.network
 
 import com.nimadugarov.gamepowergiveaways.data.entities.Giveaway
 import com.nimadugarov.gamepowergiveaways.data.entities.GiveawayDetails
-import com.nimadugarov.gamepowergiveaways.data.network.entities.GiveawayResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -26,7 +25,7 @@ interface ApiService {
         @Query("platform") platform: String,
         @Query("type") type: String,
         @Query("sort-by") sortBy: String
-    ): Call<GiveawayResponse>
+    ): Call<List<Giveaway>>
 
     /**
      * Загрузить [детальную информацию о раздаче][GiveawayDetails], где

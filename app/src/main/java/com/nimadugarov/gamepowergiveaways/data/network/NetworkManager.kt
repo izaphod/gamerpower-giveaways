@@ -37,9 +37,7 @@ class NetworkManager(
     }
 
     private fun addInterceptors(okHttpClient: OkHttpClient.Builder) {
-        if (BuildConfig.DEBUG) {
-            okHttpClient.addNetworkInterceptor(getInterceptorLogging())
-        }
+        okHttpClient.addNetworkInterceptor(getInterceptorLogging())
     }
 
     private fun getInterceptorLogging(): Interceptor {

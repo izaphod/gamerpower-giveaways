@@ -8,9 +8,7 @@ import com.nimadugarov.gamepowergiveaways.mvp.models.GiveawayModel
 import com.nimadugarov.gamepowergiveaways.mvp.models.entities.GiveawaysState
 import com.nimadugarov.gamepowergiveaways.mvp.presenters.base.BasePresenter
 import com.nimadugarov.gamepowergiveaways.mvp.views.GameGiveawaysView
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
 import moxy.presenterScope
 
@@ -51,25 +49,25 @@ class GameGiveawaysPresenter(
     private fun subscribeGiveaways() {
         presenterScope.launch {
             giveawayModel.subscribeGiveaways()
-                .flowOn(Dispatchers.Default)
                 .collect { giveawaysState -> showGiveawaysState(giveawaysState) }
         }
     }
 
     private fun showGiveawaysState(giveawaysState: GiveawaysState) {
+        giveawayList = giveawaysState.data
         val checker = GiveawaysStateChecker(giveawaysState, giveawayList)
+        val error = giveawaysState.error
         when {
             checker.isLoading -> {
                 viewState.startContentLoading()
             }
             checker.isLoadedSuccessful -> {
                 viewState.endContentLoading()
-                giveawayList = giveawaysState.data
                 viewState.showGameGiveaways(giveawayList!!)
             }
             checker.isLoadedWithError -> {
                 viewState.endContentLoading()
-                viewState.showContentLoadingError(giveawaysState.error!!)
+                viewState.showContentLoadingError(error!!)
             }
         }
     }
@@ -84,5 +82,6 @@ class GiveawaysStateChecker(
 ) {
     val isLoading get() = giveawaysState.isLoading && giveawayList == null
     val isLoadedSuccessful get() = giveawaysState.isLoading.not() && giveawayList != null
-    val isLoadedWithError get() = giveawaysState.isLoading.not() && giveawayList == null
+    val isLoadedWithError get() =
+        giveawaysState.isLoading.not() && giveawaysState.error != null && giveawayList == null
 }

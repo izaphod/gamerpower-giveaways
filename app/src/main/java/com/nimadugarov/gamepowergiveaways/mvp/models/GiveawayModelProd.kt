@@ -3,7 +3,6 @@ package com.nimadugarov.gamepowergiveaways.mvp.models
 import com.nimadugarov.gamepowergiveaways.data.entities.Giveaway
 import com.nimadugarov.gamepowergiveaways.data.entities.GiveawayDetails
 import com.nimadugarov.gamepowergiveaways.data.network.base.NetworkCallback
-import com.nimadugarov.gamepowergiveaways.data.network.entities.GiveawayResponse
 import com.nimadugarov.gamepowergiveaways.mvp.models.entities.GiveawaysState
 import com.nimadugarov.gamepowergiveaways.mvp.models.gateways.GiveawayGateway
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -15,7 +14,7 @@ import retrofit2.Call
  */
 class GiveawayModelProd(private val giveawayGateway: GiveawayGateway) : GiveawayModel {
 
-    private var giveawaysCall: Call<GiveawayResponse>? = null
+    private var giveawaysCall: Call<List<Giveaway>>? = null
     private var giveawayDetailsCall: Call<GiveawayDetails>? = null
 
     private val giveawaysFlow = MutableStateFlow(GiveawaysState())
@@ -63,10 +62,10 @@ class GiveawayModelProd(private val giveawayGateway: GiveawayGateway) : Giveaway
         )
 
         giveawaysCall = giveawayGateway.getGiveawaysCall(platform, type, sortBy)
-        giveawaysCall!!.enqueue(object : NetworkCallback<GiveawayResponse> {
-            override fun onSuccess(response: GiveawayResponse?) {
+        giveawaysCall!!.enqueue(object : NetworkCallback<List<Giveaway>> {
+            override fun onSuccess(response: List<Giveaway>?) {
                 updateGiveawaysState(
-                    giveaways = response!!.giveaways,
+                    giveaways = response!!,
                     error = null,
                     isLoading = false
                 )

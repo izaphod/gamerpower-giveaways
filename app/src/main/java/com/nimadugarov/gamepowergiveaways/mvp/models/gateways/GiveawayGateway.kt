@@ -1,8 +1,8 @@
 package com.nimadugarov.gamepowergiveaways.mvp.models.gateways
 
+import com.nimadugarov.gamepowergiveaways.data.entities.Giveaway
 import com.nimadugarov.gamepowergiveaways.data.entities.GiveawayDetails
 import com.nimadugarov.gamepowergiveaways.data.network.ApiService
-import com.nimadugarov.gamepowergiveaways.data.network.entities.GiveawayResponse
 import retrofit2.Call
 
 /**
@@ -14,7 +14,7 @@ class GiveawayGateway(private val apiService: ApiService) {
         platform: String,
         type: String,
         sortBy: String
-    ): Call<GiveawayResponse> = apiService.getGiveaways(
+    ): Call<List<Giveaway>> = apiService.getGiveaways(
         platform = platform,
         type = type,
         sortBy = sortBy
