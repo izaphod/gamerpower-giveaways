@@ -50,7 +50,8 @@ class GameGiveawaysPresenter(
 
     private fun subscribeGiveaways() {
         presenterScope.launch {
-            giveawayModel.subscribeGiveaways()
+            giveawayModel
+                .subscribeGiveaways()
                 .flowOn(Dispatchers.Default)
                 .collect { giveawaysState -> showGiveawaysState(giveawaysState) }
         }
