@@ -1,4 +1,4 @@
-package com.nimadugarov.gamepowergiveaways
+package com.nimadugarov.gamerpowergiveaways
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
