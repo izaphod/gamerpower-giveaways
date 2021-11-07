@@ -26,12 +26,12 @@ interface GiveawayModel {
     )
 
     /**
-     * Подписаться на [изменение списка раздач][GiveawaysState]
+     * Подписаться на [состояние списка раздач][GiveawaysState]
      */
     fun subscribeGiveaways(): Flow<GiveawaysState>
 
     /**
-     * Загрузить [подробную информацию о раздаче][GiveawayDetails] по ее [id][giveawayId]
+     * Загрузить [детальную информацию о раздаче][GiveawayDetails] по ее [id][giveawayId]
      *
      * [callback] callback для загрузки списка жанров
      */
@@ -41,7 +41,7 @@ interface GiveawayModel {
     )
 
     /**
-     * Callback для загрузки списка фильмов
+     * Callback для загрузки детальной информации о раздаче
      */
     interface GetGiveawayDetailsCallback : BaseCallback<GiveawayDetails>
 }
