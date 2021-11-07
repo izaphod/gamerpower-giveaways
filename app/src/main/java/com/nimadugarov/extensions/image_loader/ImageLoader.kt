@@ -3,7 +3,7 @@ package com.nimadugarov.extensions.image_loader
 import android.graphics.drawable.Drawable
 import android.widget.ImageView
 import androidx.annotation.DrawableRes
-import com.nimadugarov.gamepowergiveaways.application.App
+import com.nimadugarov.gamerpowergiveaways.application.App
 import java.io.File
 
 /**

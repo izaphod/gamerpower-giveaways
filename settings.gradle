@@ -6,5 +6,5 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "gamepower-giveaways"
+rootProject.name = "gamerpower-giveaways"
 include ':app'
