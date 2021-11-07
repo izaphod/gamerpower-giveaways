@@ -8,7 +8,9 @@ import com.nimadugarov.gamepowergiveaways.mvp.models.GiveawayModel
 import com.nimadugarov.gamepowergiveaways.mvp.models.entities.GiveawaysState
 import com.nimadugarov.gamepowergiveaways.mvp.presenters.base.BasePresenter
 import com.nimadugarov.gamepowergiveaways.mvp.views.GameGiveawaysView
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.launch
 import moxy.presenterScope
 
@@ -49,6 +51,7 @@ class GameGiveawaysPresenter(
     private fun subscribeGiveaways() {
         presenterScope.launch {
             giveawayModel.subscribeGiveaways()
+                .flowOn(Dispatchers.Default)
                 .collect { giveawaysState -> showGiveawaysState(giveawaysState) }
         }
     }
