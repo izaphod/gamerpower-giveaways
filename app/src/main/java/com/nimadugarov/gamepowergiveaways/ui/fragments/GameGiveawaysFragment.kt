@@ -1,6 +1,9 @@
 package com.nimadugarov.gamepowergiveaways.ui.fragments
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 import com.nimadugarov.gamepowergiveaways.R
@@ -42,6 +45,17 @@ class GameGiveawaysFragment : BaseWithAppBarNavigationFragment(R.layout.game_giv
         setToolbarTitle()
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.game_giveaways_filter_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.game_giveaways_filter -> onFilterMenuClick()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
@@ -54,7 +68,7 @@ class GameGiveawaysFragment : BaseWithAppBarNavigationFragment(R.layout.game_giv
     }
 
     override fun showGameGiveawayDetails(giveawayId: Long) {
-        // todo навигаци на экран с детальной информацией
+        // todo навигация на экран с детальной информацией
     }
 
     override fun showContentLoadingError(error: String) {
@@ -95,5 +109,9 @@ class GameGiveawaysFragment : BaseWithAppBarNavigationFragment(R.layout.game_giv
 
     private fun setToolbarTitle() {
         toolbarTitleView?.text = getString(R.string.title_toolbar_game_giveaways)
+    }
+
+    private fun onFilterMenuClick() {
+        // todo открыть диалог с фильтрами
     }
 }

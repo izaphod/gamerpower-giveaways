@@ -3,5 +3,5 @@
     android:id="@+id/toolbar_title_text"
     style="@style/SansSerif500.Normal.White_ff.Size18.MM"
     android:ellipsize="end"
-    android:gravity="center_vertical"
+    android:gravity="center"
     android:maxLines="1" />
