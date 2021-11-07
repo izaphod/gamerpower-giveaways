@@ -8,8 +8,8 @@ import com.google.gson.annotations.SerializedName
 data class Giveaway(
     val id: Long?,
     val title: String?,
-    @SerializedName("thumbnail")
-    val thumbnailUrl: String?,
+    @SerializedName("image")
+    val imageUrl: String?,
     val platforms: String?,
     @SerializedName("end_date")
     val endDate: String?

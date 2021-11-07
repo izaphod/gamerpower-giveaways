@@ -32,9 +32,9 @@ class GiveawayViewHolder(
     private fun showGiveaway() {
         binding.gameTitleText.text = giveaway.title
         ImageLoader
-            .load(giveaway.thumbnailUrl)
+            .load(giveaway.imageUrl)
             .centerCrop()
-            .into(binding.gameThumbnailImage)
+            .into(binding.gameImage)
     }
 
     private fun setListener() {
