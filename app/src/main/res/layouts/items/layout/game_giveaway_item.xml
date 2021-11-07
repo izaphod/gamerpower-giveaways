@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/LVMW"
-    android:paddingHorizontal="16dp"
-    android:paddingVertical="8dp">
+    style="@style/GiveawayCard.MW"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp">
 
-    <com.google.android.material.card.MaterialCardView
-        style="@style/GiveawayCard.MW"
-        android:outlineProvider="bounds">
+    <androidx.appcompat.widget.LinearLayoutCompat style="@style/LVMW">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/game_thumbnail_image"
-            style="@style/M_H216"
+            style="@style/M_H192"
             tools:ignore="ContentDescription"
             tools:scaleType="centerCrop"
             tools:srcCompat="@tools:sample/backgrounds/scenic[5]" />
 
-    </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/game_title_text"
+            style="@style/SansSerif700.Normal.Black_00.Size16.MW"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="8dp"
+            android:gravity="center_horizontal"
+            tools:text="Free Endless Space Collection" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/game_title_text"
-        style="@style/SansSerif700.Normal.Black_00.Size16.MW"
-        android:layout_marginTop="8dp"
-        tools:text="Free Endless Space Collection" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</com.google.android.material.card.MaterialCardView>
