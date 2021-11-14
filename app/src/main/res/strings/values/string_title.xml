@@ -2,4 +2,7 @@
 <resources>
     <string name="title_toolbar_game_giveaways">Game Giveaway Tracker</string>
     <string name="title_game_giveaways_filter_menu">Filter</string>
+    <string name="title_sort_by">Sort by</string>
+    <string name="title_giveaway_type">Giveaway type</string>
+    <string name="title_platform">Platform</string>
 </resources>
